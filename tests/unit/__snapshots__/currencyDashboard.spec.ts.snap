@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CurrencyDashboard.vue should match current snapshot 1`] = `
+<div class="dashboard">
+  <h3>Currency Converter</h3>
+</div>
+`;
