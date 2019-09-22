@@ -14,4 +14,4 @@ install:
 script:
   - yarn lint
   - yarn test:unit
-  - yarn test:e2e --record
+  - yarn test:e2e
