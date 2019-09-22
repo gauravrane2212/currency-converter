@@ -2,6 +2,9 @@
 
 exports[`CurrencyDashboard.vue should match current snapshot 1`] = `
 <div class="dashboard">
-  <h3>Currency Converter</h3>
+  <h1>Currency Converter</h1>
+  <div class="card">
+    <currencyheader-stub></currencyheader-stub>
+  </div>
 </div>
 `;

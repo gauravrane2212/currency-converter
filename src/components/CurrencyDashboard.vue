@@ -1,30 +1,38 @@
 <template>
   <div class="dashboard">
-    <h3>Currency Converter</h3>
+    <h1>Currency Converter</h1>
+    <div class="card">
+      <CurrencyHeader @onInputChanged="valueChanged" />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
+import CurrencyHeader from "@/components/CurrencyHeader.vue";
 
-@Component({})
-export default class CurrencyDashboard extends Vue {}
+@Component({
+  components: {
+    CurrencyHeader
+  }
+})
+export default class CurrencyDashboard extends Vue {
+  private userEnteredAmount: number = 10;
+
+  valueChanged(newValue: number): void {
+    this.userEnteredAmount = newValue;
+  }
+}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
+h1 {
+  margin: 40px 0 20px;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+
+.card {
+  margin: 0 auto;
+  width: 540px;
+  border: 1px ridge rgb(218, 215, 215);
 }
 </style>
